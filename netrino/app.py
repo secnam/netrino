@@ -30,19 +30,12 @@
 import netrino.models
 from luxon import register_middleware
 
-from luxon.middleware.wsgi.api.token import Token
-from luxon.middleware.policy import Policy
+from psychokinetic.middleware.wsgi.token import Token
+from psychokinetic.middleware.policy import Policy
 
 register_middleware(Token)
 register_middleware(Policy)
 
-import luxon.resources.wsgi.api.index
-import luxon.resources.wsgi.api.token
-import luxon.resources.wsgi.api.endpoints
-import luxon.resources.wsgi.api.domains
-import luxon.resources.wsgi.api.roles
-import luxon.resources.wsgi.api.rbac
-import luxon.resources.wsgi.api.tenants
-import luxon.resources.wsgi.api.users
+import luxon.resources.wsgi.index
 
 import netrino.views
