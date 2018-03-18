@@ -30,9 +30,11 @@
 import netrino.models
 from luxon import register_middleware
 
+from psychokinetic.middleware.client import Client
 from psychokinetic.middleware.wsgi.token import Token
 from psychokinetic.middleware.policy import Policy
 
+register_middleware(Client)
 register_middleware(Token)
 register_middleware(Policy)
 
